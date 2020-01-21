@@ -41,7 +41,7 @@ class Card:
                 return "🂢"
             elif self.face == Card.Face.THREE:
                 return "🂣"
-            elif self.face = Card.Face.FOUR:
+            elif self.face == Card.Face.FOUR:
                 return "🂤"
             elif self.face == Card.Face.FIVE:
                 return "🂥"
@@ -61,7 +61,84 @@ class Card:
                 return "🂭"
             elif self.face == Card.Face.KING:
                 return "🂮"
-
-    @property
-    def Value(self):
-        return self.face.value
+        elif self.suit == Card.Suit.HEARTS:
+            if self.face == Card.Face.ACE:
+                return "🂱"
+            elif self.face == Card.Face.TWO:
+                return "🂲"
+            elif self.face == Card.Face.THREE:
+                return "🂳"
+            elif self.face == Card.Face.FOUR:
+                return "🂴"
+            elif self.face == Card.Face.FIVE:
+                return "🂵"
+            elif self.face == Card.Face.SIX:
+                return "🂶"
+            elif self.face == Card.Face.SEVEN:
+                return "🂷"
+            elif self.face == Card.Face.EIGHT:
+                return "🂸"
+            elif self.face == Card.Face.NINE:
+                return "🂹"
+            elif self.face == Card.Face.TEN:
+                return "🂺"
+            elif self.face == Card.Face.JACK:
+                return "🂻"
+            elif self.face == Card.Face.QUEEN:
+                return "🂽"
+            elif self.face == Card.Face.KING:
+                return "🂾"
+        elif self.suit == Card.Suit.DIAMONDS:
+            if self.face == Card.Face.ACE:
+                return "🃁"
+            elif self.face == Card.Face.TWO:
+                return "🃂"
+            elif self.face == Card.Face.THREE:
+                return "🃃"
+            elif self.face == Card.Face.FOUR:
+                return "🃄"
+            elif self.face == Card.Face.FIVE:
+                return "🃅"
+            elif self.face == Card.Face.SIX:
+                return "🃆"
+            elif self.face == Card.Face.SEVEN:
+                return "🃇"
+            elif self.face == Card.Face.EIGHT:
+                return "🃈"
+            elif self.face == Card.Face.NINE:
+                return "🃉"
+            elif self.face == Card.Face.TEN:
+                return "🃊"
+            elif self.face == Card.Face.JACK:
+                return "🃋"
+            elif self.face == Card.Face.QUEEN:
+                return "🃍"
+            elif self.face == Card.Face.KING:
+                return "🃎"
+        elif self.suit == Card.Suit.CLUBS:
+            if self.face == Card.Face.ACE:
+                return "🃑"
+            elif self.face == Card.Face.TWO:
+                return "🃒"
+            elif self.face == Card.Face.THREE:
+                return "🃓"
+            elif self.face == Card.Face.FOUR:
+                return "🃔"
+            elif self.face == Card.Face.FIVE:
+                return "🃕"
+            elif self.face == Card.Face.SIX:
+                return "🃖"
+            elif self.face == Card.Face.SEVEN:
+                return "🃗"
+            elif self.face == Card.Face.EIGHT:
+                return "🃘"
+            elif self.face == Card.Face.NINE:
+                return "🃙"
+            elif self.face == Card.Face.TEN:
+                return "🃚"
+            elif self.face == Card.Face.JACK:
+                return "🃛"
+            elif self.face == Card.Face.QUEEN:
+                return "🃝"
+            elif self.face == Card.Face.KING:
+                return "🃞"
