@@ -24,7 +24,7 @@ class Card:
         HEARTS = auto()
         SPADES = auto()
 
-    def __init__(self, face, suit, visible):
+    def __init__(self, face, suit, visible=False):
         self.face = face
         self.suit = suit
         self.visible = visible
