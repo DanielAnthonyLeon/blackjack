@@ -6,6 +6,13 @@ class Hand:
     def __init__(self):
         self._cards = []
 
+    def __str__(self):
+        rep = ""
+        for card in self._cards:
+            rep += str(card)
+
+        return rep
+
     @property
     def value(self):
         value = sum(x.value for x in self._cards)

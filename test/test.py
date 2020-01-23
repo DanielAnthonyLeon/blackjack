@@ -24,7 +24,7 @@ class Test(unittest.TestCase):
         shoe.collect([card1, card2])
         self.assertEqual(len(shoe.cards), 52)
 
-    def test_hand(self):
+    def test_hand_value(self):
         hand = Hand()
         hand.deal(Card(Face.THREE))
         self.assertEqual(hand.value, 3)
