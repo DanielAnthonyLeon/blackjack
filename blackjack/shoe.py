@@ -5,7 +5,7 @@ from face import Face
 from suit import Suit
 
 
-class Deck:
+class Shoe:
     def __init__(self, num_decks):
         self.cards = []
         for face in Face:
