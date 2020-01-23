@@ -26,15 +26,15 @@ class Test(unittest.TestCase):
 
     def test_hand_value(self):
         hand = Hand()
-        hand.deal(Card(Face.THREE))
+        hand.hit(Card(Face.THREE))
         self.assertEqual(hand.value, 3)
-        hand.deal(Card(Face.ACE))
+        hand.hit(Card(Face.ACE))
         self.assertEqual(hand.value, 14)
-        hand.deal(Card(Face.ACE))
+        hand.hit(Card(Face.ACE))
         self.assertEqual(hand.value, 15)
-        hand.deal(Card(Face.JACK))
+        hand.hit(Card(Face.JACK))
         self.assertEqual(hand.value, 15)
-        hand.deal(Card(Face.ACE))
+        hand.hit(Card(Face.ACE))
         self.assertEqual(hand.value, 16)
 
 

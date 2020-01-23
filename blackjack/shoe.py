@@ -16,4 +16,4 @@ class Shoe:
         return self.cards.pop(random.randint(0, len(self.cards) - 1))
 
     def collect(self, cards):
-        self.cards = cards + self.cards
+        self.cards += cards

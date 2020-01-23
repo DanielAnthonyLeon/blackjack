@@ -8,5 +8,10 @@ class Player:
     def __str__(self):
         return str(self._hand)
 
-    def deal(self, card):
-        self._hand.deal(card)
+    def hit(self, card):
+        self._hand.hit(card)
+
+    def dispose(self):
+        cards = self._hand.cards
+        self._hand = Hand()
+        return cards

@@ -4,17 +4,20 @@ from suit import Suit
 
 
 class Card:
-    def __init__(self, face, suit=Suit.SPADES, visible=False):
+    def __init__(self, face, suit=Suit.SPADES, visible=True):
         self.face = face
         self.suit = suit
-        self.visible = visible
+        self._visible = visible
 
     def __str__(self):
-        if not self.visible:
-            return "🂠"
+        if not self._visible:
+            return "__"
 
-        return constant.CARD_CHARS[self.suit, self.face]
+        return self.suit.value + self.face.value
 
     @property
     def value(self):
+        if not self._visible:
+            return 0
+
         return constant.CARD_VALUES[self.face]
