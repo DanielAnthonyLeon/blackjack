@@ -18,5 +18,10 @@ class Player:
         self.hand = Hand()
         return cards
 
-    def under_limit(self):
-        return self.hand.value < constant.WIN_VALUE
+    def act(self, shoe):
+        action = input("action: ")
+        if action == constant.HIT:
+            self.hit(shoe.draw())
+            return self.hand.value < constant.WIN_VALUE
+        elif action == constant.STAND:
+            return False

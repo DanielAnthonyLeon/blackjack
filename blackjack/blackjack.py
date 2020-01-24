@@ -11,22 +11,17 @@ class Blackjack:
         self.dealer = Player()
         self.player = Player()
         while True:
-            self.round()
+            self.play_round()
 
     def __str__(self):
         return str(self.dealer) + os.linesep + str(self.player)
 
-    def round(self):
+    def play_round(self):
         self.deal()
         while True:
             print(self)
-            if not self.player.under_limit():
-                break
-
-            action = input("action: ")
-            if action == constant.HIT:
-                self.player.hit(self.shoe.draw())
-            elif action == constant.STAND:
+            if not self.player.act(self.shoe):
+                print(self)
                 break
 
         self.shoe.collect(self.dealer.dispose() + self.player.dispose())
