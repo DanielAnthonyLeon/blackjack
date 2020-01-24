@@ -1,7 +1,6 @@
 import os
 
 import constant
-from dealer import Dealer
 from player import Player
 from shoe import Shoe
 
@@ -9,7 +8,7 @@ from shoe import Shoe
 class Blackjack:
     def play(self):
         self.shoe = Shoe(1)
-        self.dealer = Dealer()
+        self.dealer = Player()
         self.player = Player()
         while True:
             self.round()
@@ -21,6 +20,9 @@ class Blackjack:
         self.deal()
         while True:
             print(self)
+            if not self.player.under_limit():
+                break
+
             action = input("action: ")
             if action == constant.HIT:
                 self.player.hit(self.shoe.draw())
@@ -32,6 +34,6 @@ class Blackjack:
 
     def deal(self):
         self.player.hit(self.shoe.draw())
-        self.dealer.hit(self.shoe.draw())
+        self.dealer.hit(self.shoe.draw(), True)
         self.player.hit(self.shoe.draw())
         self.dealer.hit(self.shoe.draw())
