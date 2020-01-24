@@ -1,6 +1,6 @@
 import os
 
-from action import Action
+import constant
 from dealer import Dealer
 from player import Player
 from shoe import Shoe
@@ -19,15 +19,19 @@ class Blackjack:
 
     def round(self):
         self.deal()
-        print(self)
-        input()
+        while True:
+            print(self)
+            action = input("action: ")
+            if action == constant.HIT:
+                self.player.hit(self.shoe.draw())
+            elif action == constant.STAND:
+                break
+
         self.shoe.collect(self.dealer.dispose() + self.player.dispose())
+        input()
 
     def deal(self):
         self.player.hit(self.shoe.draw())
         self.dealer.hit(self.shoe.draw())
         self.player.hit(self.shoe.draw())
         self.dealer.hit(self.shoe.draw())
-
-    def action(self):
-        print("actions: " + ", ".join(x.value for x in Action))

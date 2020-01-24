@@ -3,15 +3,15 @@ from hand import Hand
 
 class Player:
     def __init__(self):
-        self._hand = Hand()
+        self.hand = Hand()
 
     def __str__(self):
-        return str(self._hand)
+        return str(self.hand)
 
     def hit(self, card):
-        self._hand.hit(card)
+        self.hand.hit(card)
 
     def dispose(self):
-        cards = self._hand.cards
-        self._hand = Hand()
+        cards = self.hand.cards
+        self.hand = Hand()
         return cards

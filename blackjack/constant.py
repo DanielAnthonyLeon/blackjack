@@ -6,3 +6,6 @@ CARD_VALUES = {Face.TWO: 2, Face.THREE: 3, Face.FOUR: 4, Face.FIVE: 5, Face.SIX:
 
 ALT_ACE_VALUE = 1
 WIN_VALUE = 21
+
+HIT = "hit"
+STAND = "stand"
